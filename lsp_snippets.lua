@@ -243,7 +243,7 @@ end
 
 local function placeholder_node(v, _s)
 	local id = tonumber(v[2])
-	_s:default(id, v[4])
+	if #v > 4 then _s:default(id, v[4]) end
 	return B.user(id)
 end
 
